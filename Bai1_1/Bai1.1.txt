@@ -1,0 +1,6 @@
+Framework NestJS
+1. các thành phần cơ bản
+2. các công nghệ chính được cung cấp sẵn
+3. triển khai giải pháp dựa vào framework theo chuẩn MVC
+npm run start
+Invoke-RestMethod -Uri http://localhost:3001/users -Method Post -ContentType "application/json" -Body '{"name":"Alice","age":22}'

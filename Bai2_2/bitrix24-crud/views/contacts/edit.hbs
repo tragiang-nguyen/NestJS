@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Contact</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Edit Contact</h1>
+  <form action="/contacts/{{contact.ID}}" method="POST">
+    <label>Tên:</label><input type="text" name="NAME" value="{{contact.NAME}}" required><br>
+    <label>Địa chỉ:</label><input type="text" name="ADDRESS" value="{{contact.ADDRESS}}"><br>
+    <label>Số điện thoại:</label><input type="text" name="PHONE" value="{{contact.PHONE.[-1].VALUE}}"><br> <!-- Lấy giá trị cuối cùng -->
+    <label>Email:</label><input type="text" name="EMAIL" value="{{contact.EMAIL.[-1].VALUE}}"><br> <!-- Lấy giá trị cuối cùng -->
+    <label>Website:</label><input type="text" name="WEBSITE" value="{{contact.WEB.[-1].VALUE}}"><br> <!-- Lấy giá trị cuối cùng -->
+    <label>Tên ngân hàng:</label><input type="text" name="BANK_NAME" value="{{contact.RQ_BANK_NAME}}"><br>
+    <label>Số tài khoản:</label><input type="text" name="BANK_ACCOUNT" value="{{contact.RQ_ACC_NUM}}"><br>
+    <button type="submit">Update Contact</button>
+  </form>
+  <a href="/contacts">Back to List</a>
+</body>
+</html>

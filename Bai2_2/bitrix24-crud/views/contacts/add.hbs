@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Contact</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Add New Contact</h1>
+  <form action="/contacts" method="POST">
+    <label>Tên:</label><input type="text" name="NAME" required><br>
+    <label>Địa chỉ:</label><input type="text" name="ADDRESS"><br>
+    <label>Số điện thoại:</label><input type="text" name="PHONE"><br>
+    <label>Email:</label><input type="text" name="EMAIL"><br>
+    <label>Website:</label><input type="text" name="WEBSITE"><br>
+    <label>Tên ngân hàng:</label><input type="text" name="BANK_NAME"><br>
+    <label>Số tài khoản:</label><input type="text" name="BANK_ACCOUNT"><br>
+    <button type="submit">Add Contact</button>
+  </form>
+  <a href="/contacts">Back to List</a>
+</body>
+</html>

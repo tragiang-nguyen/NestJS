@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Đăng ký</title>
+</head>
+<body>
+  <h2>Đăng ký tài khoản</h2>
+  <form method="POST" action="/auth/register">
+    <label>Tên đăng nhập:</label><br>
+    <input type="text" name="username" required><br>
+    <label>Mật khẩu:</label><br>
+    <input type="password" name="password" required><br>
+    <label>Email:</label><br>
+    <input type="email" name="email"><br>
+    <label>Họ tên:</label><br>
+    <input type="text" name="fullname"><br>
+    <label>Tuổi:</label><br>
+    <input type="number" name="age"><br>
+    <label>Nickname:</label><br>
+    <input type="text" name="nickname"><br><br>
+    <button type="submit">Đăng ký</button>
+  </form>
+  <p>Đã có tài khoản? <a href="/login">Đăng nhập</a></p>
+</body>
+</html>

@@ -1,0 +1,46 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(15, 30px);
+  gap: 2px;
+  background-color: #333;
+  padding: 2px;
+  width: fit-content;
+  border: 2px solid #000;
+}
+.cell {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+.cell[data-row="14"] {
+  border-bottom: none;
+}
+.cell:nth-child(15n) {
+  border-right: none;
+}
+#status {
+  margin-top: 10px;
+  font-size: 18px;
+}
+#restartBtn {
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.cell:where(:not(:empty)) {
+  font-weight: bold;
+}
+.cell:where(:not(:empty):contains("X")) {
+  color: blue;
+}
+.cell:where(:not(:empty):contains("O")) {
+  color: red;
+}

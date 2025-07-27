@@ -1,0 +1,32 @@
+<!-- filepath: views/profile.hbs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Thông tin cá nhân</title>
+</head>
+<body>
+  <h2>Cập nhật thông tin cá nhân</h2>
+  {{#if message}}<p style="color:blue">{{message}}</p>{{/if}}
+  <form method="POST" action="/users/profile">
+    <label>Tên đăng nhập:</label><br>
+    <input type="text" name="username" value="{{user.username}}" required><br>
+    <label>Mật khẩu:</label><br>
+    <input type="password" name="password" value="" required><br>
+    <label>Email:</label><br>
+    <input type="email" name="email" value="{{user.email}}"><br>
+    <label>Họ tên:</label><br>
+    <input type="text" name="fullname" value="{{user.fullname}}"><br>
+    <label>Tuổi:</label><br>
+    <input type="number" name="age" value="{{user.age}}"><br>
+    <label>Nickname:</label><br>
+    <input type="text" name="nickname" value="{{user.nickname}}"><br><br>
+    <button type="submit">Cập nhật</button>
+  </form>
+  <hr>
+  <h3>Trò chơi:</h3>
+  <a href="/games/line98">Chơi trò chơi 98</a>
+  <br>
+  <a href="/games/caro">Chơi trò chơi XO</a>
+  <p><a href="/auth/login">Đăng xuất</a></p>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact List</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Contact List</h1>
+  <a href="/contacts/add">Add New Contact</a>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Website</th>
+        <th>Bank Name</th>
+        <th>Bank Account</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each contacts}}
+        <tr>
+          <td>{{NAME}}</td>
+          <td>{{ADDRESS}}</td>
+          <td>{{PHONE.[0].VALUE}}</td>
+          <td>{{EMAIL.[0].VALUE}}</td>
+          <td>{{WEB.[0].VALUE}}</td>
+          <td>{{this.RQ_BANK_NAME}}</td>
+          <td>{{this.RQ_ACC_NUM}}</td>
+          <td>
+            <a href="/contacts/{{ID}}/edit">Edit</a>
+            <form action="/contacts/{{ID}}/delete" method="POST" style="display:inline;">
+              <button type="submit">Delete</button>
+            </form>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</body>
+</html>
